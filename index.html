@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New web site</title>
+    <!-- TAILWIND CUSTOM COLOR -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        " gradient-colorss": '#FF8938',
+                        " gradient-end": '#F00',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GOOGEL FONT ROBOTO  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+    <style>
+        .roboto-bold-italic {
+            font-family: 'Roboto';
+        }
+    </style>
+</head>
+
+<body>
+    <header class=" max-w-7xl mx-auto p-2">
+        <nav>
+            <div class="navbar fixed z-10 bg-opacity-95 max-w-7xl mx-auto">
+                <div class="navbar-start ">
+                    <img class="md:w-24 lg:w-36 md:hidden" src="imagess/logo-dark.svg.png" alt="">
+                    <div class="navbar-center hidden lg:flex items-center">
+                        <ul class="menu-horizontal px-1 gap-8">
+                            <div class="flex gap-4">
+                                <li><a class=" text-red-600 border-b-2 border-black">Home</a></li>
+                                <img class="h-1 mt-4 w-2" src="imagess/Link (2).png" alt="">
+                            </div>
+                            <div class="flex gap-4">
+                                <li><a class="hover:text-red-600  hover:underline">Listings</a>
+                                </li>
+                                <img class="h-1 mt-3 w-2" src="imagess/Link (2).png" alt="">
+                            </div>
+                            <div class="flex gap-4">
+                                <li><a class="hover:text-red-600  hover:underline">Members</a>
+                                </li>
+                                <img class="h-1 mt-3 w-2" src="imagess/Link (2).png" alt="">
+                            </div>
+                            <div class="flex gap-4">
+                                <li><a class="hover:text-red-600  hover:underline">Blog</a>
+                                </li>
+                                <img class="h-1 mt-3 w-2" src="imagess/Link (2).png" alt="">
+                            </div>
+                            <div class="flex gap-4">
+                                <li><a class="hover:text-red-600  hover:underline">Pages</a>
+                                </li>
+                                <img class="h-1 mt-3 w-2" src="imagess/Link (2).png" alt="">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <img class="md:w-24 lg:w-36 hidden md:flex" src="imagess/logo-dark.svg.png" alt="">
+                <div class="flex items-center hidden lg:flex gap-6 ml-10">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <h2 class="text-sm font-semibold">Login / Register</h2>
+                    <div class="flex  bg-black gap-2 text-white px-4 py-2">
+                        <h2>Add Property</h2>
+                        <img class="h-3 w-3 mt-2" src="imagess/Icon (3).png" alt="">
+                    </div>
+                    <img src="imagess/div.elementor-element.png" alt="">
+                </div>
+                <div class="dropdown dropdown-left">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-12 rounded z-[1] p-2 shadow bg-base-100 ">
+                        <li><a>Home</a></li>
+                        <li><a>Listings</a></li>
+                        <li><a>Members</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Pages</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- banner section -->
+
+        <div class="flex flex-col md:flex-row my-14">
+            <div class="w-1/2">
+                <div class="my-10">
+                    <h2 class="lg:text-4xl text-2xl font-semibold lg:font-bold">Discover a place you'll <br> love to
+                        live</h2>
+                    <div class="bg-[#F7F7F7] rounded hidden lg:flex absolute mt-14">
+                        <div
+                            class="flex flex-row md:flex-row items-center pl-4 bg-[#F7F7F7] absolute -top-8 p-2 rounded gap-10">
+                            <div class="text-sm font-semibold">
+                                <h2 class="border-b-2 border-black">All</h2>
+                            </div>
+                            <div class="flex flex-row md:flex-row gap-2 p-2 text-sm font-semibold">
+                                <p>For Sale</p>
+                                <p>For Rent</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col  md:flex-row justify-center pl-4 p-5 items-center gap-14">
+                            <div>
+                                <input type="email" placeholder="Enter Keyword" class="py-2 px-16 rounded" name=""
+                                    id="">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="-mt-8 ml-2" width="18" height="19"
+                                    viewBox="0 0 18 19" fill="none">
+                                    <g clip-path="url(#clip0_6108_1223)">
+                                        <path
+                                            d="M13.8 18.8H3C2.2 18.8 1.51 18.51 0.93 17.93C0.35 17.35 0.06 16.64 0.06 15.8L0 7.81996C0 7.05996 0.17 6.36996 0.51 5.74996C0.85 5.12996 1.34 4.61996 1.98 4.21996L6.78 1.21996C7.26 0.939959 7.79 0.799957 8.37 0.799957C8.95 0.799957 9.48 0.939959 9.96 1.21996L14.76 4.21996C15.4 4.57996 15.89 5.07996 16.23 5.71996C16.57 6.35996 16.74 7.05996 16.74 7.81996L16.8 15.8C16.8 16.64 16.51 17.35 15.93 17.93C15.35 18.51 14.64 18.8 13.8 18.8ZM8.4 1.99996C8.04 1.99996 7.72 2.07996 7.44 2.23996L2.58 5.23996C2.14 5.51996 1.8 5.88996 1.56 6.34996C1.32 6.80996 1.2 7.29996 1.2 7.81996V15.8C1.2 16.28 1.38 16.7 1.74 17.06C2.1 17.42 2.52 17.6 3 17.6H13.8C14.32 17.6 14.75 17.42 15.09 17.06C15.43 16.7 15.6 16.28 15.6 15.8V7.81996C15.6 7.25996 15.47 6.75996 15.21 6.31996C14.95 5.87996 14.6 5.51996 14.16 5.23996L9.3 2.23996C9.02 2.07996 8.72 1.99996 8.4 1.99996ZM10.8 15.2H6C5.84 15.2 5.71 15.14 5.61 15.02C5.51 14.9 5.46 14.76 5.46 14.6C5.46 14.44 5.51 14.3 5.61 14.18C5.71 14.06 5.84 14 6 14H10.8C11.04 13.96 11.23 14.05 11.37 14.27C11.51 14.49 11.51 14.71 11.37 14.93C11.23 15.15 11.04 15.24 10.8 15.2Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1223">
+                                            <rect width="18" height="18" fill="white"
+                                                transform="matrix(1 0 0 -1 0 18.8)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                            <div class="flex gap-2 mt-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                                </svg>
+                                <div class="flex flex-col lg:flex-row md:gap-20">
+                                    <p>Advanced</p>
+                                    <img class="bg-black p-3 " src="imagess/Icon (4).png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex lg:mt-48 gap-10 md:gap-14">
+                    <div>
+                        <h1 class="text-3xl font-bold">154</h1>
+                        <p class="text-sm mt-2 font-normal">Award Winning</p>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">6K+</h1>
+                        <p class="text-sm mt-2 font-normal">Happy Customer</p>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">558+</h1>
+                        <p class="text-sm mt-2 font-normal">Property Ready</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/2 mt-5">
+                <img class="lg:w-[400px] w-[300px] opacity-100 mx-auto lg:relative"
+                    src="imagess/rs-slides → rs-slide → rs-sbg-px → rs-sbg-wrap → rs-sbg → image.png" alt="">
+                <img class="lg:w-[500px] w-[380px] lg:absolute mx-auto mt-5 top-48 right-0 "
+                    src="imagess/__before (6).png" alt="">
+                <div class="flex justify-center gap-2 items-center -mt-10">
+                    <img src="imagess/Tablist → Tab - 1 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Trusted by the world’s best -->
+        <section class="max-w-5xl mx-auto p-2">
+            <h2 class="text-center mb-10 mt-10">Trusted by the world’s best</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 items-center  lg:grid-cols-6 gap-5">
+                <div>
+                    <img src="imagess/Link → b1.jpg.png" alt="">
+                </div>
+                <div>
+                    <img src="imagess/Link → b2.jpg.png" alt="">
+                </div>
+                <div>
+                    <img src="imagess/Link → b3.jpg.png" alt="">
+                </div>
+                <div>
+                    <img src="imagess/Link → b4.jpg.png" alt="">
+                </div>
+                <div>
+                    <img src="imagess/Link → b5.jpg.png" alt="">
+                </div>
+                <div>
+                    <img src="imagess/Link → b6.jpg.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Featured Homes -->
+        <section class="max-w-5xl mx-auto p-2">
+            <div class="flex flex-col md:flex-row gap-5 mt-8 items-center justify-between lg:my-28">
+                <div>
+                    <h2 class="text-3xl font-semibold">Featured Homes</h2>
+                    <p class="text-[#717171]">Aliquam lacinia diam quis lacus euismod</p>
+                </div>
+                <div class="flex gap-2">
+                    <p>All Types</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-4 mt-1 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:gap-7 mt-5 md:grid-cols-2 lg:grid-cols-4">
+                <div class="relative">
+                    <img class="md:w-[270px] md:h-[321px] w-full" src="imagess/h7-t1.jpg.png" alt="">
+                    <div class="absolute top-8 left-14">
+                        <p class="text-x font-semibold">Apartments for sale</p>
+                        <p>3 Properties</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img class="md:w-[270px] md:h-[321px] w-full" src="imagess/h7-t2.jpg.png" alt="">
+                    <div class="absolute top-8 left-4">
+                        <p class="text-x font-semibold">Single family homes for sale</p>
+                        <p>7 Properties</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img class="md:w-[270px] md:h-[321px] w-full" src="imagess/h7-t3.jpg.png" alt="">
+                    <div class="absolute top-8 left-20">
+                        <p class="text-x font-semibold">Office for sale</p>
+                        <p>4 Properties</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img class="md:w-[270px] md:h-[321px] w-full" src="imagess/h7-t4.jpg.png" alt="">
+                    <div class="absolute top-8 left-20">
+                        <p class="text-x font-semibold">Villas for sale</p>
+                        <p>4 Properties</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Featured Properties -->
+        <section class="py-10 bg-[#F7F7F7] p-2 my-20">
+            <div class="flex flex-col md:flex-row justify-between  max-w-5xl mx-auto py-10">
+                <div>
+                    <h2 class="lg:text-3xl text-xl font-bold">Our Featured Properties</h2>
+                    <p class="text-[#717171]">Aliquam lacinia diam quis lacus euismod</p>
+                </div>
+                <div class="flex  gap-2 mt-4 items-center">
+                    <p class="text-white bg-black py-2 px-4 rounded">For Sale</p>
+                    <p class="border rounded px-3 py-2">For Rent</p>
+                </div>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-7 lg:grid-cols-3">
+                    <!-- CARD NUMBER 1 -->
+                    <div>
+                        <img class="rounded-t-2xl rounded-b-none w-full" src="imagess/Section → Main → Section (3).png"
+                            alt="">
+                        <div class="bg-white shadow-2xl space-y-2 p-4 rounded-b relative">
+                            <h2 class="text-sm font-bold ">Luxury Family Home</h2>
+                            <p class="text-[#717171]">132 Greene Ave</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car"></i>
+                                    <p>6</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1299)">
+                                            <path
+                                                d="M11.63 1.3867H7.36333C6.75889 1.3867 6.20778 1.52892 5.71 1.81336C5.21222 2.09781 4.81222 2.49781 4.51 3.01336C4.20778 3.52892 4.05667 4.08892 4.05667 4.69336H3.09667C2.45667 4.69336 1.90556 4.92447 1.44333 5.3867C0.981111 5.84892 0.75 6.40003 0.75 7.04003V8.48003C0.75 8.62225 0.794444 8.73781 0.883333 8.8267C0.972222 8.91559 1.08778 8.96003 1.23 8.96003H7.84333C7.98556 8.96003 8.10111 8.91559 8.19 8.8267C8.27889 8.73781 8.32333 8.62225 8.32333 8.48003V7.04003C8.32333 6.40003 8.09222 5.84892 7.63 5.3867C7.16778 4.92447 6.61667 4.69336 5.97667 4.69336H5.01667C5.01667 4.05336 5.24778 3.50225 5.71 3.04003C6.17222 2.57781 6.72333 2.32892 7.36333 2.29336H11.63C12.27 2.32892 12.8211 2.57781 13.2833 3.04003C13.7456 3.50225 13.9944 4.05336 14.03 4.69336V15.0934H14.9367V4.69336C14.9367 4.08892 14.7944 3.52892 14.51 3.01336C14.2256 2.49781 13.8256 2.09781 13.31 1.81336C12.7944 1.52892 12.2344 1.3867 11.63 1.3867ZM5.92333 5.65336C6.31444 5.65336 6.65222 5.7867 6.93667 6.05336C7.22111 6.32003 7.36333 6.64892 7.36333 7.04003V8.00003H1.65667V7.04003C1.65667 6.64892 1.79889 6.32003 2.08333 6.05336C2.36778 5.7867 2.70556 5.65336 3.09667 5.65336H5.92333ZM1.23 10.4H2.13667V13.7067H1.23V10.4ZM3.09667 10.4H4.05667V11.7867H3.09667V10.4ZM3.09667 13.2267H4.05667V15.0934H3.09667V13.2267ZM5.01667 10.4H5.92333V12.7467H5.01667V10.4ZM5.01667 13.7067H5.92333V14.6134H5.01667V13.7067ZM6.88333 10.4H7.84333V11.7867H6.88333V10.4ZM6.88333 12.7467H7.84333V15.5734H6.88333V12.7467Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1299">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.75 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1302)">
+                                            <path
+                                                d="M6.3733 1.3867H9.2533V2.29336H6.3733V1.3867ZM14 14.1867C14 14.2934 13.9466 14.4 13.84 14.5067C13.7333 14.6134 13.6266 14.6667 13.52 14.6667H11.6V15.5734H13.52C13.9111 15.5734 14.24 15.44 14.5066 15.1734C14.7733 14.9067 14.9066 14.5778 14.9066 14.1867V12.2667H14V14.1867ZM13.52 1.3867H11.6V2.29336H13.52C13.6266 2.29336 13.7333 2.3467 13.84 2.45336C13.9466 2.56003 14 2.6667 14 2.77336V4.69336H14.9066V2.77336C14.9066 2.38225 14.7733 2.05336 14.5066 1.7867C14.24 1.52003 13.9111 1.3867 13.52 1.3867ZM1.62664 2.77336C1.62664 2.6667 1.67997 2.56003 1.78664 2.45336C1.8933 2.3467 1.99997 2.29336 2.10664 2.29336H4.02664V1.3867H2.10664C1.71553 1.3867 1.38664 1.52003 1.11997 1.7867C0.853304 2.05336 0.719971 2.38225 0.719971 2.77336V4.69336H1.62664V2.77336ZM14 7.04003H14.9066V9.92003H14V7.04003ZM11.6 8.00003V5.17336C11.6 5.03114 11.5555 4.91559 11.4666 4.8267C11.3777 4.73781 11.2622 4.69336 11.12 4.69336H8.2933V5.65336H9.99997L7.4933 8.16003C7.27997 8.05336 7.06664 8.00003 6.8533 8.00003H2.10664C1.96442 8.00003 1.80442 8.03559 1.62664 8.1067V7.04003H0.719971V14.1867C0.719971 14.5778 0.853304 14.9067 1.11997 15.1734C1.38664 15.44 1.71553 15.5734 2.10664 15.5734H9.2533V14.6667H8.18664C8.25775 14.4889 8.2933 14.3289 8.2933 14.1867V9.44003C8.2933 9.2267 8.23997 9.01336 8.1333 8.80003L10.64 6.29336V8.00003H11.6ZM2.10664 14.6667C1.99997 14.6667 1.8933 14.6134 1.78664 14.5067C1.67997 14.4 1.62664 14.2934 1.62664 14.1867V9.44003C1.62664 9.29781 1.67997 9.18225 1.78664 9.09336C1.8933 9.00448 1.99997 8.96003 2.10664 8.96003H6.8533C6.99553 8.96003 7.11108 9.00448 7.19997 9.09336C7.28886 9.18225 7.3333 9.29781 7.3333 9.44003V14.1867C7.3333 14.2934 7.28886 14.4 7.19997 14.5067C7.11108 14.6134 6.99553 14.6667 6.8533 14.6667H2.10664Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1302">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.719971 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>400</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-14 right-5">
+                                <p class="text-sm font-semibold bg-black text-white p-2 px-4">$5,800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD NUMBER 2 -->
+                    <div>
+                        <img class="rounded-t-2xl rounded-b-none w-full" src="imagess/Article (2).png" alt="">
+                        <div class="bg-white shadow-2xl space-y-2 p-4 rounded-b relative">
+                            <h2 class="text-sm font-bold ">Skyper Pool Apartment</h2>
+                            <p class="text-[#717171]">151 Tompkins Ave</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car"></i>
+                                    <p>6</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1299)">
+                                            <path
+                                                d="M11.63 1.3867H7.36333C6.75889 1.3867 6.20778 1.52892 5.71 1.81336C5.21222 2.09781 4.81222 2.49781 4.51 3.01336C4.20778 3.52892 4.05667 4.08892 4.05667 4.69336H3.09667C2.45667 4.69336 1.90556 4.92447 1.44333 5.3867C0.981111 5.84892 0.75 6.40003 0.75 7.04003V8.48003C0.75 8.62225 0.794444 8.73781 0.883333 8.8267C0.972222 8.91559 1.08778 8.96003 1.23 8.96003H7.84333C7.98556 8.96003 8.10111 8.91559 8.19 8.8267C8.27889 8.73781 8.32333 8.62225 8.32333 8.48003V7.04003C8.32333 6.40003 8.09222 5.84892 7.63 5.3867C7.16778 4.92447 6.61667 4.69336 5.97667 4.69336H5.01667C5.01667 4.05336 5.24778 3.50225 5.71 3.04003C6.17222 2.57781 6.72333 2.32892 7.36333 2.29336H11.63C12.27 2.32892 12.8211 2.57781 13.2833 3.04003C13.7456 3.50225 13.9944 4.05336 14.03 4.69336V15.0934H14.9367V4.69336C14.9367 4.08892 14.7944 3.52892 14.51 3.01336C14.2256 2.49781 13.8256 2.09781 13.31 1.81336C12.7944 1.52892 12.2344 1.3867 11.63 1.3867ZM5.92333 5.65336C6.31444 5.65336 6.65222 5.7867 6.93667 6.05336C7.22111 6.32003 7.36333 6.64892 7.36333 7.04003V8.00003H1.65667V7.04003C1.65667 6.64892 1.79889 6.32003 2.08333 6.05336C2.36778 5.7867 2.70556 5.65336 3.09667 5.65336H5.92333ZM1.23 10.4H2.13667V13.7067H1.23V10.4ZM3.09667 10.4H4.05667V11.7867H3.09667V10.4ZM3.09667 13.2267H4.05667V15.0934H3.09667V13.2267ZM5.01667 10.4H5.92333V12.7467H5.01667V10.4ZM5.01667 13.7067H5.92333V14.6134H5.01667V13.7067ZM6.88333 10.4H7.84333V11.7867H6.88333V10.4ZM6.88333 12.7467H7.84333V15.5734H6.88333V12.7467Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1299">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.75 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1302)">
+                                            <path
+                                                d="M6.3733 1.3867H9.2533V2.29336H6.3733V1.3867ZM14 14.1867C14 14.2934 13.9466 14.4 13.84 14.5067C13.7333 14.6134 13.6266 14.6667 13.52 14.6667H11.6V15.5734H13.52C13.9111 15.5734 14.24 15.44 14.5066 15.1734C14.7733 14.9067 14.9066 14.5778 14.9066 14.1867V12.2667H14V14.1867ZM13.52 1.3867H11.6V2.29336H13.52C13.6266 2.29336 13.7333 2.3467 13.84 2.45336C13.9466 2.56003 14 2.6667 14 2.77336V4.69336H14.9066V2.77336C14.9066 2.38225 14.7733 2.05336 14.5066 1.7867C14.24 1.52003 13.9111 1.3867 13.52 1.3867ZM1.62664 2.77336C1.62664 2.6667 1.67997 2.56003 1.78664 2.45336C1.8933 2.3467 1.99997 2.29336 2.10664 2.29336H4.02664V1.3867H2.10664C1.71553 1.3867 1.38664 1.52003 1.11997 1.7867C0.853304 2.05336 0.719971 2.38225 0.719971 2.77336V4.69336H1.62664V2.77336ZM14 7.04003H14.9066V9.92003H14V7.04003ZM11.6 8.00003V5.17336C11.6 5.03114 11.5555 4.91559 11.4666 4.8267C11.3777 4.73781 11.2622 4.69336 11.12 4.69336H8.2933V5.65336H9.99997L7.4933 8.16003C7.27997 8.05336 7.06664 8.00003 6.8533 8.00003H2.10664C1.96442 8.00003 1.80442 8.03559 1.62664 8.1067V7.04003H0.719971V14.1867C0.719971 14.5778 0.853304 14.9067 1.11997 15.1734C1.38664 15.44 1.71553 15.5734 2.10664 15.5734H9.2533V14.6667H8.18664C8.25775 14.4889 8.2933 14.3289 8.2933 14.1867V9.44003C8.2933 9.2267 8.23997 9.01336 8.1333 8.80003L10.64 6.29336V8.00003H11.6ZM2.10664 14.6667C1.99997 14.6667 1.8933 14.6134 1.78664 14.5067C1.67997 14.4 1.62664 14.2934 1.62664 14.1867V9.44003C1.62664 9.29781 1.67997 9.18225 1.78664 9.09336C1.8933 9.00448 1.99997 8.96003 2.10664 8.96003H6.8533C6.99553 8.96003 7.11108 9.00448 7.19997 9.09336C7.28886 9.18225 7.3333 9.29781 7.3333 9.44003V14.1867C7.3333 14.2934 7.28886 14.4 7.19997 14.5067C7.11108 14.6134 6.99553 14.6667 6.8533 14.6667H2.10664Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1302">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.719971 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>400</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-14 right-5">
+                                <p class="text-sm font-semibold bg-black text-white p-2 px-4">$5,800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD NUMBER 3 -->
+                    <div>
+                        <img class="rounded-t-2xl rounded-b-none w-full"
+                            src="imagess/Section → Main → Section → Article (4).png" alt="">
+                        <div class="bg-white shadow-2xl space-y-2 p-4 rounded-b relative">
+                            <h2 class="text-sm font-bold ">House on the Hollywood</h2>
+                            <p class="text-[#717171]">374 Johnson Ave</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car"></i>
+                                    <p>6</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1299)">
+                                            <path
+                                                d="M11.63 1.3867H7.36333C6.75889 1.3867 6.20778 1.52892 5.71 1.81336C5.21222 2.09781 4.81222 2.49781 4.51 3.01336C4.20778 3.52892 4.05667 4.08892 4.05667 4.69336H3.09667C2.45667 4.69336 1.90556 4.92447 1.44333 5.3867C0.981111 5.84892 0.75 6.40003 0.75 7.04003V8.48003C0.75 8.62225 0.794444 8.73781 0.883333 8.8267C0.972222 8.91559 1.08778 8.96003 1.23 8.96003H7.84333C7.98556 8.96003 8.10111 8.91559 8.19 8.8267C8.27889 8.73781 8.32333 8.62225 8.32333 8.48003V7.04003C8.32333 6.40003 8.09222 5.84892 7.63 5.3867C7.16778 4.92447 6.61667 4.69336 5.97667 4.69336H5.01667C5.01667 4.05336 5.24778 3.50225 5.71 3.04003C6.17222 2.57781 6.72333 2.32892 7.36333 2.29336H11.63C12.27 2.32892 12.8211 2.57781 13.2833 3.04003C13.7456 3.50225 13.9944 4.05336 14.03 4.69336V15.0934H14.9367V4.69336C14.9367 4.08892 14.7944 3.52892 14.51 3.01336C14.2256 2.49781 13.8256 2.09781 13.31 1.81336C12.7944 1.52892 12.2344 1.3867 11.63 1.3867ZM5.92333 5.65336C6.31444 5.65336 6.65222 5.7867 6.93667 6.05336C7.22111 6.32003 7.36333 6.64892 7.36333 7.04003V8.00003H1.65667V7.04003C1.65667 6.64892 1.79889 6.32003 2.08333 6.05336C2.36778 5.7867 2.70556 5.65336 3.09667 5.65336H5.92333ZM1.23 10.4H2.13667V13.7067H1.23V10.4ZM3.09667 10.4H4.05667V11.7867H3.09667V10.4ZM3.09667 13.2267H4.05667V15.0934H3.09667V13.2267ZM5.01667 10.4H5.92333V12.7467H5.01667V10.4ZM5.01667 13.7067H5.92333V14.6134H5.01667V13.7067ZM6.88333 10.4H7.84333V11.7867H6.88333V10.4ZM6.88333 12.7467H7.84333V15.5734H6.88333V12.7467Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1299">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.75 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1302)">
+                                            <path
+                                                d="M6.3733 1.3867H9.2533V2.29336H6.3733V1.3867ZM14 14.1867C14 14.2934 13.9466 14.4 13.84 14.5067C13.7333 14.6134 13.6266 14.6667 13.52 14.6667H11.6V15.5734H13.52C13.9111 15.5734 14.24 15.44 14.5066 15.1734C14.7733 14.9067 14.9066 14.5778 14.9066 14.1867V12.2667H14V14.1867ZM13.52 1.3867H11.6V2.29336H13.52C13.6266 2.29336 13.7333 2.3467 13.84 2.45336C13.9466 2.56003 14 2.6667 14 2.77336V4.69336H14.9066V2.77336C14.9066 2.38225 14.7733 2.05336 14.5066 1.7867C14.24 1.52003 13.9111 1.3867 13.52 1.3867ZM1.62664 2.77336C1.62664 2.6667 1.67997 2.56003 1.78664 2.45336C1.8933 2.3467 1.99997 2.29336 2.10664 2.29336H4.02664V1.3867H2.10664C1.71553 1.3867 1.38664 1.52003 1.11997 1.7867C0.853304 2.05336 0.719971 2.38225 0.719971 2.77336V4.69336H1.62664V2.77336ZM14 7.04003H14.9066V9.92003H14V7.04003ZM11.6 8.00003V5.17336C11.6 5.03114 11.5555 4.91559 11.4666 4.8267C11.3777 4.73781 11.2622 4.69336 11.12 4.69336H8.2933V5.65336H9.99997L7.4933 8.16003C7.27997 8.05336 7.06664 8.00003 6.8533 8.00003H2.10664C1.96442 8.00003 1.80442 8.03559 1.62664 8.1067V7.04003H0.719971V14.1867C0.719971 14.5778 0.853304 14.9067 1.11997 15.1734C1.38664 15.44 1.71553 15.5734 2.10664 15.5734H9.2533V14.6667H8.18664C8.25775 14.4889 8.2933 14.3289 8.2933 14.1867V9.44003C8.2933 9.2267 8.23997 9.01336 8.1333 8.80003L10.64 6.29336V8.00003H11.6ZM2.10664 14.6667C1.99997 14.6667 1.8933 14.6134 1.78664 14.5067C1.67997 14.4 1.62664 14.2934 1.62664 14.1867V9.44003C1.62664 9.29781 1.67997 9.18225 1.78664 9.09336C1.8933 9.00448 1.99997 8.96003 2.10664 8.96003H6.8533C6.99553 8.96003 7.11108 9.00448 7.19997 9.09336C7.28886 9.18225 7.3333 9.29781 7.3333 9.44003V14.1867C7.3333 14.2934 7.28886 14.4 7.19997 14.5067C7.11108 14.6134 6.99553 14.6667 6.8533 14.6667H2.10664Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1302">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.719971 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>400</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-14 right-5">
+                                <p class="text-sm font-semibold bg-black text-white p-2 px-4">$5,800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD NUMBER 4 -->
+                    <div>
+                        <img class="rounded-t-2xl rounded-b-none w-full" src="imagess/Section → Main → Section (3).png"
+                            alt="">
+                        <div class="bg-white shadow-2xl space-y-2 p-4 rounded-b relative">
+                            <h2 class="text-sm font-bold ">Gorgeous Villa Bay</h2>
+                            <p class="text-[#717171]">18 Grattan St, Brooklyn</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car"></i>
+                                    <p>6</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1299)">
+                                            <path
+                                                d="M11.63 1.3867H7.36333C6.75889 1.3867 6.20778 1.52892 5.71 1.81336C5.21222 2.09781 4.81222 2.49781 4.51 3.01336C4.20778 3.52892 4.05667 4.08892 4.05667 4.69336H3.09667C2.45667 4.69336 1.90556 4.92447 1.44333 5.3867C0.981111 5.84892 0.75 6.40003 0.75 7.04003V8.48003C0.75 8.62225 0.794444 8.73781 0.883333 8.8267C0.972222 8.91559 1.08778 8.96003 1.23 8.96003H7.84333C7.98556 8.96003 8.10111 8.91559 8.19 8.8267C8.27889 8.73781 8.32333 8.62225 8.32333 8.48003V7.04003C8.32333 6.40003 8.09222 5.84892 7.63 5.3867C7.16778 4.92447 6.61667 4.69336 5.97667 4.69336H5.01667C5.01667 4.05336 5.24778 3.50225 5.71 3.04003C6.17222 2.57781 6.72333 2.32892 7.36333 2.29336H11.63C12.27 2.32892 12.8211 2.57781 13.2833 3.04003C13.7456 3.50225 13.9944 4.05336 14.03 4.69336V15.0934H14.9367V4.69336C14.9367 4.08892 14.7944 3.52892 14.51 3.01336C14.2256 2.49781 13.8256 2.09781 13.31 1.81336C12.7944 1.52892 12.2344 1.3867 11.63 1.3867ZM5.92333 5.65336C6.31444 5.65336 6.65222 5.7867 6.93667 6.05336C7.22111 6.32003 7.36333 6.64892 7.36333 7.04003V8.00003H1.65667V7.04003C1.65667 6.64892 1.79889 6.32003 2.08333 6.05336C2.36778 5.7867 2.70556 5.65336 3.09667 5.65336H5.92333ZM1.23 10.4H2.13667V13.7067H1.23V10.4ZM3.09667 10.4H4.05667V11.7867H3.09667V10.4ZM3.09667 13.2267H4.05667V15.0934H3.09667V13.2267ZM5.01667 10.4H5.92333V12.7467H5.01667V10.4ZM5.01667 13.7067H5.92333V14.6134H5.01667V13.7067ZM6.88333 10.4H7.84333V11.7867H6.88333V10.4ZM6.88333 12.7467H7.84333V15.5734H6.88333V12.7467Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1299">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.75 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1302)">
+                                            <path
+                                                d="M6.3733 1.3867H9.2533V2.29336H6.3733V1.3867ZM14 14.1867C14 14.2934 13.9466 14.4 13.84 14.5067C13.7333 14.6134 13.6266 14.6667 13.52 14.6667H11.6V15.5734H13.52C13.9111 15.5734 14.24 15.44 14.5066 15.1734C14.7733 14.9067 14.9066 14.5778 14.9066 14.1867V12.2667H14V14.1867ZM13.52 1.3867H11.6V2.29336H13.52C13.6266 2.29336 13.7333 2.3467 13.84 2.45336C13.9466 2.56003 14 2.6667 14 2.77336V4.69336H14.9066V2.77336C14.9066 2.38225 14.7733 2.05336 14.5066 1.7867C14.24 1.52003 13.9111 1.3867 13.52 1.3867ZM1.62664 2.77336C1.62664 2.6667 1.67997 2.56003 1.78664 2.45336C1.8933 2.3467 1.99997 2.29336 2.10664 2.29336H4.02664V1.3867H2.10664C1.71553 1.3867 1.38664 1.52003 1.11997 1.7867C0.853304 2.05336 0.719971 2.38225 0.719971 2.77336V4.69336H1.62664V2.77336ZM14 7.04003H14.9066V9.92003H14V7.04003ZM11.6 8.00003V5.17336C11.6 5.03114 11.5555 4.91559 11.4666 4.8267C11.3777 4.73781 11.2622 4.69336 11.12 4.69336H8.2933V5.65336H9.99997L7.4933 8.16003C7.27997 8.05336 7.06664 8.00003 6.8533 8.00003H2.10664C1.96442 8.00003 1.80442 8.03559 1.62664 8.1067V7.04003H0.719971V14.1867C0.719971 14.5778 0.853304 14.9067 1.11997 15.1734C1.38664 15.44 1.71553 15.5734 2.10664 15.5734H9.2533V14.6667H8.18664C8.25775 14.4889 8.2933 14.3289 8.2933 14.1867V9.44003C8.2933 9.2267 8.23997 9.01336 8.1333 8.80003L10.64 6.29336V8.00003H11.6ZM2.10664 14.6667C1.99997 14.6667 1.8933 14.6134 1.78664 14.5067C1.67997 14.4 1.62664 14.2934 1.62664 14.1867V9.44003C1.62664 9.29781 1.67997 9.18225 1.78664 9.09336C1.8933 9.00448 1.99997 8.96003 2.10664 8.96003H6.8533C6.99553 8.96003 7.11108 9.00448 7.19997 9.09336C7.28886 9.18225 7.3333 9.29781 7.3333 9.44003V14.1867C7.3333 14.2934 7.28886 14.4 7.19997 14.5067C7.11108 14.6134 6.99553 14.6667 6.8533 14.6667H2.10664Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1302">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.719971 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>400</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-14 right-5">
+                                <p class="text-sm font-semibold bg-black text-white p-2 px-4">$5,800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD NUMBER 5 -->
+                    <div>
+                        <img class="rounded-t rounded-b-none w-full" src="imagess/Article (4).png" alt="">
+                        <div class="bg-white shadow-2xl space-y-2 p-4 rounded-b relative">
+                            <h2 class="text-sm font-bold ">Diamond Manor Apartment</h2>
+                            <p class="text-[#717171]">343 Franklin Ave</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car"></i>
+                                    <p>6</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1299)">
+                                            <path
+                                                d="M11.63 1.3867H7.36333C6.75889 1.3867 6.20778 1.52892 5.71 1.81336C5.21222 2.09781 4.81222 2.49781 4.51 3.01336C4.20778 3.52892 4.05667 4.08892 4.05667 4.69336H3.09667C2.45667 4.69336 1.90556 4.92447 1.44333 5.3867C0.981111 5.84892 0.75 6.40003 0.75 7.04003V8.48003C0.75 8.62225 0.794444 8.73781 0.883333 8.8267C0.972222 8.91559 1.08778 8.96003 1.23 8.96003H7.84333C7.98556 8.96003 8.10111 8.91559 8.19 8.8267C8.27889 8.73781 8.32333 8.62225 8.32333 8.48003V7.04003C8.32333 6.40003 8.09222 5.84892 7.63 5.3867C7.16778 4.92447 6.61667 4.69336 5.97667 4.69336H5.01667C5.01667 4.05336 5.24778 3.50225 5.71 3.04003C6.17222 2.57781 6.72333 2.32892 7.36333 2.29336H11.63C12.27 2.32892 12.8211 2.57781 13.2833 3.04003C13.7456 3.50225 13.9944 4.05336 14.03 4.69336V15.0934H14.9367V4.69336C14.9367 4.08892 14.7944 3.52892 14.51 3.01336C14.2256 2.49781 13.8256 2.09781 13.31 1.81336C12.7944 1.52892 12.2344 1.3867 11.63 1.3867ZM5.92333 5.65336C6.31444 5.65336 6.65222 5.7867 6.93667 6.05336C7.22111 6.32003 7.36333 6.64892 7.36333 7.04003V8.00003H1.65667V7.04003C1.65667 6.64892 1.79889 6.32003 2.08333 6.05336C2.36778 5.7867 2.70556 5.65336 3.09667 5.65336H5.92333ZM1.23 10.4H2.13667V13.7067H1.23V10.4ZM3.09667 10.4H4.05667V11.7867H3.09667V10.4ZM3.09667 13.2267H4.05667V15.0934H3.09667V13.2267ZM5.01667 10.4H5.92333V12.7467H5.01667V10.4ZM5.01667 13.7067H5.92333V14.6134H5.01667V13.7067ZM6.88333 10.4H7.84333V11.7867H6.88333V10.4ZM6.88333 12.7467H7.84333V15.5734H6.88333V12.7467Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1299">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.75 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1302)">
+                                            <path
+                                                d="M6.3733 1.3867H9.2533V2.29336H6.3733V1.3867ZM14 14.1867C14 14.2934 13.9466 14.4 13.84 14.5067C13.7333 14.6134 13.6266 14.6667 13.52 14.6667H11.6V15.5734H13.52C13.9111 15.5734 14.24 15.44 14.5066 15.1734C14.7733 14.9067 14.9066 14.5778 14.9066 14.1867V12.2667H14V14.1867ZM13.52 1.3867H11.6V2.29336H13.52C13.6266 2.29336 13.7333 2.3467 13.84 2.45336C13.9466 2.56003 14 2.6667 14 2.77336V4.69336H14.9066V2.77336C14.9066 2.38225 14.7733 2.05336 14.5066 1.7867C14.24 1.52003 13.9111 1.3867 13.52 1.3867ZM1.62664 2.77336C1.62664 2.6667 1.67997 2.56003 1.78664 2.45336C1.8933 2.3467 1.99997 2.29336 2.10664 2.29336H4.02664V1.3867H2.10664C1.71553 1.3867 1.38664 1.52003 1.11997 1.7867C0.853304 2.05336 0.719971 2.38225 0.719971 2.77336V4.69336H1.62664V2.77336ZM14 7.04003H14.9066V9.92003H14V7.04003ZM11.6 8.00003V5.17336C11.6 5.03114 11.5555 4.91559 11.4666 4.8267C11.3777 4.73781 11.2622 4.69336 11.12 4.69336H8.2933V5.65336H9.99997L7.4933 8.16003C7.27997 8.05336 7.06664 8.00003 6.8533 8.00003H2.10664C1.96442 8.00003 1.80442 8.03559 1.62664 8.1067V7.04003H0.719971V14.1867C0.719971 14.5778 0.853304 14.9067 1.11997 15.1734C1.38664 15.44 1.71553 15.5734 2.10664 15.5734H9.2533V14.6667H8.18664C8.25775 14.4889 8.2933 14.3289 8.2933 14.1867V9.44003C8.2933 9.2267 8.23997 9.01336 8.1333 8.80003L10.64 6.29336V8.00003H11.6ZM2.10664 14.6667C1.99997 14.6667 1.8933 14.6134 1.78664 14.5067C1.67997 14.4 1.62664 14.2934 1.62664 14.1867V9.44003C1.62664 9.29781 1.67997 9.18225 1.78664 9.09336C1.8933 9.00448 1.99997 8.96003 2.10664 8.96003H6.8533C6.99553 8.96003 7.11108 9.00448 7.19997 9.09336C7.28886 9.18225 7.3333 9.29781 7.3333 9.44003V14.1867C7.3333 14.2934 7.28886 14.4 7.19997 14.5067C7.11108 14.6134 6.99553 14.6667 6.8533 14.6667H2.10664Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1302">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.719971 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>400</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-14 right-5">
+                                <p class="text-sm font-semibold bg-black text-white p-2 px-4">$5,800</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD NUMBER 6 -->
+                    <div>
+                        <img class="rounded-t-2xl rounded-b-none w-full"
+                            src="imagess/Section → Main → Section → Article (5).png" alt="">
+                        <div class="bg-white shadow-2xl space-y-2 p-4 rounded-b relative">
+                            <h2 class="text-sm font-bold ">Comfortable Villa Green</h2>
+                            <p class="text-[#717171]">178 Broadway, Brooklyn</p>
+                            <div class="flex gap-2">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-car"></i>
+                                    <p>6</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1299)">
+                                            <path
+                                                d="M11.63 1.3867H7.36333C6.75889 1.3867 6.20778 1.52892 5.71 1.81336C5.21222 2.09781 4.81222 2.49781 4.51 3.01336C4.20778 3.52892 4.05667 4.08892 4.05667 4.69336H3.09667C2.45667 4.69336 1.90556 4.92447 1.44333 5.3867C0.981111 5.84892 0.75 6.40003 0.75 7.04003V8.48003C0.75 8.62225 0.794444 8.73781 0.883333 8.8267C0.972222 8.91559 1.08778 8.96003 1.23 8.96003H7.84333C7.98556 8.96003 8.10111 8.91559 8.19 8.8267C8.27889 8.73781 8.32333 8.62225 8.32333 8.48003V7.04003C8.32333 6.40003 8.09222 5.84892 7.63 5.3867C7.16778 4.92447 6.61667 4.69336 5.97667 4.69336H5.01667C5.01667 4.05336 5.24778 3.50225 5.71 3.04003C6.17222 2.57781 6.72333 2.32892 7.36333 2.29336H11.63C12.27 2.32892 12.8211 2.57781 13.2833 3.04003C13.7456 3.50225 13.9944 4.05336 14.03 4.69336V15.0934H14.9367V4.69336C14.9367 4.08892 14.7944 3.52892 14.51 3.01336C14.2256 2.49781 13.8256 2.09781 13.31 1.81336C12.7944 1.52892 12.2344 1.3867 11.63 1.3867ZM5.92333 5.65336C6.31444 5.65336 6.65222 5.7867 6.93667 6.05336C7.22111 6.32003 7.36333 6.64892 7.36333 7.04003V8.00003H1.65667V7.04003C1.65667 6.64892 1.79889 6.32003 2.08333 6.05336C2.36778 5.7867 2.70556 5.65336 3.09667 5.65336H5.92333ZM1.23 10.4H2.13667V13.7067H1.23V10.4ZM3.09667 10.4H4.05667V11.7867H3.09667V10.4ZM3.09667 13.2267H4.05667V15.0934H3.09667V13.2267ZM5.01667 10.4H5.92333V12.7467H5.01667V10.4ZM5.01667 13.7067H5.92333V14.6134H5.01667V13.7067ZM6.88333 10.4H7.84333V11.7867H6.88333V10.4ZM6.88333 12.7467H7.84333V15.5734H6.88333V12.7467Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1299">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.75 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1302)">
+                                            <path
+                                                d="M6.3733 1.3867H9.2533V2.29336H6.3733V1.3867ZM14 14.1867C14 14.2934 13.9466 14.4 13.84 14.5067C13.7333 14.6134 13.6266 14.6667 13.52 14.6667H11.6V15.5734H13.52C13.9111 15.5734 14.24 15.44 14.5066 15.1734C14.7733 14.9067 14.9066 14.5778 14.9066 14.1867V12.2667H14V14.1867ZM13.52 1.3867H11.6V2.29336H13.52C13.6266 2.29336 13.7333 2.3467 13.84 2.45336C13.9466 2.56003 14 2.6667 14 2.77336V4.69336H14.9066V2.77336C14.9066 2.38225 14.7733 2.05336 14.5066 1.7867C14.24 1.52003 13.9111 1.3867 13.52 1.3867ZM1.62664 2.77336C1.62664 2.6667 1.67997 2.56003 1.78664 2.45336C1.8933 2.3467 1.99997 2.29336 2.10664 2.29336H4.02664V1.3867H2.10664C1.71553 1.3867 1.38664 1.52003 1.11997 1.7867C0.853304 2.05336 0.719971 2.38225 0.719971 2.77336V4.69336H1.62664V2.77336ZM14 7.04003H14.9066V9.92003H14V7.04003ZM11.6 8.00003V5.17336C11.6 5.03114 11.5555 4.91559 11.4666 4.8267C11.3777 4.73781 11.2622 4.69336 11.12 4.69336H8.2933V5.65336H9.99997L7.4933 8.16003C7.27997 8.05336 7.06664 8.00003 6.8533 8.00003H2.10664C1.96442 8.00003 1.80442 8.03559 1.62664 8.1067V7.04003H0.719971V14.1867C0.719971 14.5778 0.853304 14.9067 1.11997 15.1734C1.38664 15.44 1.71553 15.5734 2.10664 15.5734H9.2533V14.6667H8.18664C8.25775 14.4889 8.2933 14.3289 8.2933 14.1867V9.44003C8.2933 9.2267 8.23997 9.01336 8.1333 8.80003L10.64 6.29336V8.00003H11.6ZM2.10664 14.6667C1.99997 14.6667 1.8933 14.6134 1.78664 14.5067C1.67997 14.4 1.62664 14.2934 1.62664 14.1867V9.44003C1.62664 9.29781 1.67997 9.18225 1.78664 9.09336C1.8933 9.00448 1.99997 8.96003 2.10664 8.96003H6.8533C6.99553 8.96003 7.11108 9.00448 7.19997 9.09336C7.28886 9.18225 7.3333 9.29781 7.3333 9.44003V14.1867C7.3333 14.2934 7.28886 14.4 7.19997 14.5067C7.11108 14.6134 6.99553 14.6667 6.8533 14.6667H2.10664Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1302">
+                                                <rect width="16" height="16" fill="white"
+                                                    transform="matrix(1 0 0 -1 0.719971 16.48)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>400</p>
+                                </div>
+                            </div>
+                            <div class="absolute top-14 right-5">
+                                <p class="text-sm font-semibold bg-black text-white p-2 px-4">$5,800</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 bg-black text-white lg:w-[14%] px-3 py-3 justify-center mx-auto mt-10">
+                    <p class="text-sm font-semibold">Learn More</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-5 ">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <!-- Explore Cities -->
+        <section class="m-2">
+            <div class="text-center mt-14">
+                <h2 class="text-3xl font-semibold">Explore Cities</h2>
+                <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <div>
+                    <div class="flex flex-col md:flex-row gap-5 mt-10">
+                        <div class="relative">
+                            <img class="w-[570px]  h-[200px]" src="imagess/pexels-matthis-volquardsen-2350514.jpg"
+                                alt="">
+                            <div class="absolute top-5 left-4 text-white">
+                                <p class="text-sm font-semibold">Houses</p>
+                                <p class="text-x font-normal">7 Properties</p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img class="h-[200px] w-full " src="imagess/pexels-roberto-nickson-2478248.jpg" alt="">
+                            <div class="absolute top-5 left-3 text-white">
+                                <h2>Apartments</h2>
+                                <p>3 Properties</p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img class="h-[200px] w-full " src="imagess/pexels-carlos-oliva-3586966.jpg" alt="">
+                            <div class="absolute top-5 left-3 text-white">
+                                <h2>Office</h2>
+                                <p>4 Properties</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-5 mt-10">
+                        <div class="relative">
+                            <img class="h-[200px] w-full " src="imagess/pexels-stein-egil-liland-1933239.jpg" alt="">
+                            <div class="absolute top-5 left-3 text-white">
+                                <h2>Townhome</h2>
+                                <p>2 Properties</p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img class="h-[200px] w-full " src="imagess/pexels-andrew-harris-12829982.jpg" alt="">
+                            <div class="absolute top-5 left-3 text-white">
+                                <h2>Villa</h2>
+                                <p>4 Properties</p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img class="w-[570px]  h-[200px]" src="imagess/pexels-ayşe-15745629.jpg" alt="">
+                            <div class="absolute top-5 left-4 text-white">
+                                <p class="text-sm font-semibold">Bungalow</p>
+                                <p class="text-x font-normal">1 Property</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- More than 20 Years of Real Estate Experience -->
+        <section style="border-image: url(imagess/div.elementor-background-overlay.png);" class="bg-teal-700 p-2 mt-20">
+            <div class="flex md:items-center my-16 lg:p-20 max-w-5xl mx-auto flex-col md:flex-row gap-10">
+                <div class="lg:w-[450px] space-y-5 text-white">
+                    <h3 class="lg:text-3xl text-xl font-bold">More than 20 Years of Real Estate Experience</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <div class="flex gap-2 bg-black py-2 px-4 text-white md:w-[40%] lg:w-[32%]">
+                        <p>Get Started</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col md:flex-row md:items-center gap-5">
+                        <div class="bg-white shadow-2xl px-10 py-10 text-center rounded ">
+                            <h2 class="text-5xl font-semibold">0+</h2>
+                            <h2>Listing for</h2>
+                            <h2>sale</h2>
+                            w-full
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-white shadow-2xl px-10 py-10 text-center rounded ">
+                                <h2 class="text-5xl font-semibold">0+</h2>
+                                <h2>Listing for</h2>
+                                <h2>rent</h2>
+                            </div>
+                            <div class="bg-white shadow-2xl px-10 py-10 text-center rounded">
+                                <h2 class="text-5xl font-semibold">0+</h2>
+                                <h2>Property</h2>
+                                <h2>sold</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Discover Popular Properties -->
+        <section class="mt-10 bg-[#181A20] p-2">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center text-white py-10">
+                    <h2 class="text-3xl font-bold">Discover Popular Properties</h2>
+                    <p class="text-sm fotn-semibold">Aliquam lacinia diam quis lacus euismod</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 mt-10">
+                    <!-- CARD 1 -->
+                    <div class="relative">
+                        <img class="rounded-t-2xl w-full" src="imagess/Section → Main → Section (3).png" alt="">
+                        <p class="absolute top-24 left-4 bg-white px-4 py-2 rounded text-sm font-semibold">$5,800</p>
+                        <div class="space-y-3 p-4 bg-white shadow-2xl ">
+                            <h2 class="text-sm font-bold">Luxury Family Home</h2>
+                            <p class="text-[#717171]">132 Greene Ave</p>
+                            <div class="flex gap-5">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>6 Beds</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2 Baths</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center border-b">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1495)">
+                                        <path
+                                            d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1495">
+                                            <rect width="22.6274" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.75)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>400 sqft</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p>For Sale</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1509)">
+                                        <path
+                                            d="M17.607 0.926634C17.607 0.966634 17.3005 1.00108 16.6877 1.02997C16.0749 1.05886 15.3206 1.0733 14.425 1.0733H4.38406C3.53553 1.0733 2.80486 1.05886 2.19203 1.02997C1.57921 1.00108 1.27279 0.966634 1.27279 0.926634V0.453301C1.22565 0.411079 1.50849 0.375523 2.12132 0.346634C2.73415 0.317745 3.48839 0.303301 4.38406 0.303301H10.0409V0.246634H4.38406C3.81838 0.246634 3.26448 0.251634 2.72236 0.261634C2.18025 0.271634 1.69706 0.286634 1.27279 0.306634C0.848528 0.326634 0.53033 0.349412 0.318198 0.374967C0.106066 0.400523 0 0.426634 0 0.453301V0.926634C0 0.953301 0.106066 0.979412 0.318198 1.00497C0.53033 1.03052 0.848528 1.0533 1.27279 1.0733C1.69706 1.0933 2.18025 1.1083 2.72236 1.1183C3.26448 1.1283 3.81838 1.1333 4.38406 1.1333H14.425C14.9907 1.1333 15.5446 1.1283 16.0867 1.1183C16.6288 1.1083 17.112 1.0933 17.5362 1.0733C17.9605 1.0533 18.2787 1.03052 18.4908 1.00497C18.703 0.979412 18.809 0.953301 18.809 0.926634V0.659967H17.607V0.926634ZM18.1726 0.246634H12.5158V0.303301H16.6877L8.98026 0.669967L9.82878 0.709967L17.607 0.346634V0.539967H18.809V0.276634C18.809 0.267745 18.7501 0.260523 18.6323 0.254968C18.5144 0.249412 18.3612 0.246634 18.1726 0.246634Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1509">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1512)">
+                                        <path
+                                            d="M10.4652 1.14014C9.99384 1.14014 9.55779 1.13569 9.1571 1.1268C8.7564 1.11791 8.41463 1.10458 8.13179 1.0868L1.5557 0.706803C0.754311 0.669026 0.235766 0.625137 6.3926e-05 0.575137C-0.235638 0.525137 -0.176713 0.475692 0.176841 0.426803C0.530394 0.377915 1.13143 0.336803 1.97996 0.30347C2.82849 0.270137 3.79487 0.250137 4.8791 0.24347C5.96333 0.236803 7.01221 0.244026 8.02573 0.265137C9.03924 0.286248 9.85242 0.317915 10.4652 0.360137C10.6538 0.346803 10.8895 0.33347 11.1723 0.320137C11.9266 0.284581 12.7987 0.260692 13.7886 0.24847C14.7786 0.236248 15.7685 0.236248 16.7585 0.24847C17.7484 0.260692 18.6205 0.284026 19.3748 0.31847C20.129 0.352915 20.6358 0.394026 20.8951 0.441803C21.1543 0.489581 21.1543 0.536803 20.8951 0.58347C20.6358 0.630137 20.129 0.671248 19.3748 0.706803L12.7987 1.0868C12.5159 1.10458 12.1741 1.11791 11.7734 1.1268C11.3727 1.13569 10.9366 1.14014 10.4652 1.14014ZM5.65692 0.306803C4.76125 0.306803 3.94808 0.31847 3.2174 0.341803C2.48672 0.365137 1.95639 0.396248 1.62641 0.435137C1.29643 0.474026 1.21393 0.51347 1.37892 0.55347C1.54391 0.59347 1.93282 0.629026 2.54565 0.660137L9.26316 1.04347C9.54601 1.06125 9.93491 1.07014 10.4299 1.07014C10.9249 1.07014 11.3373 1.06125 11.6673 1.04347L18.3848 0.660137C18.9977 0.629026 19.3984 0.592359 19.5869 0.550137C19.7755 0.507915 19.6812 0.467359 19.3041 0.42847C18.927 0.389581 18.3613 0.359026 17.607 0.336803C16.8528 0.314581 16.016 0.304026 15.0968 0.305137C14.1776 0.306248 13.3644 0.319581 12.6573 0.345137C11.9502 0.370692 11.4316 0.40347 11.1016 0.44347C11.0545 0.450137 10.972 0.455692 10.8542 0.460137C10.7363 0.464581 10.6067 0.466803 10.4652 0.466803C10.3238 0.466803 10.1942 0.464581 10.0763 0.460137C9.95848 0.455692 9.87599 0.450137 9.82885 0.44347C9.49886 0.40347 8.95675 0.370692 8.2025 0.345137C7.44826 0.319581 6.59973 0.306803 5.65692 0.306803Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1512">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1515)">
+                                        <path
+                                            d="M18.3141 0.509968C17.9369 0.49219 17.4891 0.483301 16.9706 0.483301H13.7886V0.333301C13.7886 0.308856 13.6118 0.288301 13.2583 0.271634C12.9047 0.254968 12.4686 0.246634 11.9501 0.246634H1.83848C1.31993 0.246634 0.883883 0.254968 0.53033 0.271634C0.176777 0.288301 0 0.308856 0 0.333301V0.809967C0 0.834412 0.176777 0.854967 0.53033 0.871634C0.883883 0.888301 1.31993 0.896634 1.83848 0.896634H5.02046V1.04663C5.02046 1.07108 5.19723 1.09163 5.55079 1.1083C5.90434 1.12497 6.34039 1.1333 6.85894 1.1333H16.9706C17.4891 1.1333 17.9252 1.12497 18.2787 1.1083C18.6323 1.09163 18.809 1.07108 18.809 1.04663V0.569967C18.809 0.545523 18.644 0.525523 18.3141 0.509968ZM1.83848 0.836634C1.69706 0.836634 1.56742 0.833856 1.44957 0.828301C1.33172 0.822745 1.27279 0.815523 1.27279 0.806634V0.333301C1.27279 0.326634 1.33172 0.319968 1.44957 0.313301C1.56742 0.306634 1.69706 0.303301 1.83848 0.303301H11.9501C12.0915 0.303301 12.2212 0.306634 12.339 0.313301C12.4569 0.319968 12.5158 0.326634 12.5158 0.333301V0.483301H6.92965C6.36396 0.483301 5.90434 0.491634 5.55079 0.508301C5.19723 0.524967 5.02046 0.545523 5.02046 0.569967V0.836634H1.83848ZM17.607 1.04663C17.607 1.0533 17.5362 1.05941 17.3948 1.06497C17.2534 1.07052 17.112 1.07441 16.9706 1.07663H6.92965C6.74108 1.07441 6.58788 1.07052 6.47003 1.06497C6.35218 1.05941 6.29325 1.0533 6.29325 1.04663V0.569967C6.29325 0.563301 6.35218 0.55719 6.47003 0.551634C6.58788 0.546079 6.74108 0.543301 6.92965 0.543301H16.9706C17.112 0.543301 17.2534 0.546079 17.3948 0.551634C17.5362 0.55719 17.607 0.564412 17.607 0.573301V1.04663ZM12.5158 0.689967H11.3137V0.779967H9.40452V0.836634H11.3137V0.926634H12.5158V0.836634H14.425V0.779967H12.5158V0.689967Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1515">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD 2 -->
+                    <div class="relative">
+                        <img class="rounded-t-2xl w-full" src="imagess/Article (1).png" alt="">
+                        <p class="absolute top-24 left-4 bg-white px-4 py-2 rounded text-sm font-semibold">$4,800</p>
+                        <div class="space-y-3 p-4 bg-white shadow-2xl ">
+                            <h2 class="text-sm font-bold">Gorgeous Villa Bay</h2>
+                            <p class="text-[#717171]">18 Grattan St, Brooklyn</p>
+                            <div class="flex gap-5">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>8 Beds</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>2 Baths</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center border-b">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1495)">
+                                        <path
+                                            d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1495">
+                                            <rect width="22.6274" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.75)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>300 sqft</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p>For Sale</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1509)">
+                                        <path
+                                            d="M17.607 0.926634C17.607 0.966634 17.3005 1.00108 16.6877 1.02997C16.0749 1.05886 15.3206 1.0733 14.425 1.0733H4.38406C3.53553 1.0733 2.80486 1.05886 2.19203 1.02997C1.57921 1.00108 1.27279 0.966634 1.27279 0.926634V0.453301C1.22565 0.411079 1.50849 0.375523 2.12132 0.346634C2.73415 0.317745 3.48839 0.303301 4.38406 0.303301H10.0409V0.246634H4.38406C3.81838 0.246634 3.26448 0.251634 2.72236 0.261634C2.18025 0.271634 1.69706 0.286634 1.27279 0.306634C0.848528 0.326634 0.53033 0.349412 0.318198 0.374967C0.106066 0.400523 0 0.426634 0 0.453301V0.926634C0 0.953301 0.106066 0.979412 0.318198 1.00497C0.53033 1.03052 0.848528 1.0533 1.27279 1.0733C1.69706 1.0933 2.18025 1.1083 2.72236 1.1183C3.26448 1.1283 3.81838 1.1333 4.38406 1.1333H14.425C14.9907 1.1333 15.5446 1.1283 16.0867 1.1183C16.6288 1.1083 17.112 1.0933 17.5362 1.0733C17.9605 1.0533 18.2787 1.03052 18.4908 1.00497C18.703 0.979412 18.809 0.953301 18.809 0.926634V0.659967H17.607V0.926634ZM18.1726 0.246634H12.5158V0.303301H16.6877L8.98026 0.669967L9.82878 0.709967L17.607 0.346634V0.539967H18.809V0.276634C18.809 0.267745 18.7501 0.260523 18.6323 0.254968C18.5144 0.249412 18.3612 0.246634 18.1726 0.246634Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1509">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1512)">
+                                        <path
+                                            d="M10.4652 1.14014C9.99384 1.14014 9.55779 1.13569 9.1571 1.1268C8.7564 1.11791 8.41463 1.10458 8.13179 1.0868L1.5557 0.706803C0.754311 0.669026 0.235766 0.625137 6.3926e-05 0.575137C-0.235638 0.525137 -0.176713 0.475692 0.176841 0.426803C0.530394 0.377915 1.13143 0.336803 1.97996 0.30347C2.82849 0.270137 3.79487 0.250137 4.8791 0.24347C5.96333 0.236803 7.01221 0.244026 8.02573 0.265137C9.03924 0.286248 9.85242 0.317915 10.4652 0.360137C10.6538 0.346803 10.8895 0.33347 11.1723 0.320137C11.9266 0.284581 12.7987 0.260692 13.7886 0.24847C14.7786 0.236248 15.7685 0.236248 16.7585 0.24847C17.7484 0.260692 18.6205 0.284026 19.3748 0.31847C20.129 0.352915 20.6358 0.394026 20.8951 0.441803C21.1543 0.489581 21.1543 0.536803 20.8951 0.58347C20.6358 0.630137 20.129 0.671248 19.3748 0.706803L12.7987 1.0868C12.5159 1.10458 12.1741 1.11791 11.7734 1.1268C11.3727 1.13569 10.9366 1.14014 10.4652 1.14014ZM5.65692 0.306803C4.76125 0.306803 3.94808 0.31847 3.2174 0.341803C2.48672 0.365137 1.95639 0.396248 1.62641 0.435137C1.29643 0.474026 1.21393 0.51347 1.37892 0.55347C1.54391 0.59347 1.93282 0.629026 2.54565 0.660137L9.26316 1.04347C9.54601 1.06125 9.93491 1.07014 10.4299 1.07014C10.9249 1.07014 11.3373 1.06125 11.6673 1.04347L18.3848 0.660137C18.9977 0.629026 19.3984 0.592359 19.5869 0.550137C19.7755 0.507915 19.6812 0.467359 19.3041 0.42847C18.927 0.389581 18.3613 0.359026 17.607 0.336803C16.8528 0.314581 16.016 0.304026 15.0968 0.305137C14.1776 0.306248 13.3644 0.319581 12.6573 0.345137C11.9502 0.370692 11.4316 0.40347 11.1016 0.44347C11.0545 0.450137 10.972 0.455692 10.8542 0.460137C10.7363 0.464581 10.6067 0.466803 10.4652 0.466803C10.3238 0.466803 10.1942 0.464581 10.0763 0.460137C9.95848 0.455692 9.87599 0.450137 9.82885 0.44347C9.49886 0.40347 8.95675 0.370692 8.2025 0.345137C7.44826 0.319581 6.59973 0.306803 5.65692 0.306803Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1512">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1515)">
+                                        <path
+                                            d="M18.3141 0.509968C17.9369 0.49219 17.4891 0.483301 16.9706 0.483301H13.7886V0.333301C13.7886 0.308856 13.6118 0.288301 13.2583 0.271634C12.9047 0.254968 12.4686 0.246634 11.9501 0.246634H1.83848C1.31993 0.246634 0.883883 0.254968 0.53033 0.271634C0.176777 0.288301 0 0.308856 0 0.333301V0.809967C0 0.834412 0.176777 0.854967 0.53033 0.871634C0.883883 0.888301 1.31993 0.896634 1.83848 0.896634H5.02046V1.04663C5.02046 1.07108 5.19723 1.09163 5.55079 1.1083C5.90434 1.12497 6.34039 1.1333 6.85894 1.1333H16.9706C17.4891 1.1333 17.9252 1.12497 18.2787 1.1083C18.6323 1.09163 18.809 1.07108 18.809 1.04663V0.569967C18.809 0.545523 18.644 0.525523 18.3141 0.509968ZM1.83848 0.836634C1.69706 0.836634 1.56742 0.833856 1.44957 0.828301C1.33172 0.822745 1.27279 0.815523 1.27279 0.806634V0.333301C1.27279 0.326634 1.33172 0.319968 1.44957 0.313301C1.56742 0.306634 1.69706 0.303301 1.83848 0.303301H11.9501C12.0915 0.303301 12.2212 0.306634 12.339 0.313301C12.4569 0.319968 12.5158 0.326634 12.5158 0.333301V0.483301H6.92965C6.36396 0.483301 5.90434 0.491634 5.55079 0.508301C5.19723 0.524967 5.02046 0.545523 5.02046 0.569967V0.836634H1.83848ZM17.607 1.04663C17.607 1.0533 17.5362 1.05941 17.3948 1.06497C17.2534 1.07052 17.112 1.07441 16.9706 1.07663H6.92965C6.74108 1.07441 6.58788 1.07052 6.47003 1.06497C6.35218 1.05941 6.29325 1.0533 6.29325 1.04663V0.569967C6.29325 0.563301 6.35218 0.55719 6.47003 0.551634C6.58788 0.546079 6.74108 0.543301 6.92965 0.543301H16.9706C17.112 0.543301 17.2534 0.546079 17.3948 0.551634C17.5362 0.55719 17.607 0.564412 17.607 0.573301V1.04663ZM12.5158 0.689967H11.3137V0.779967H9.40452V0.836634H11.3137V0.926634H12.5158V0.836634H14.425V0.779967H12.5158V0.689967Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1515">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD 3 -->
+                    <div class="relative">
+                        <img class="rounded-t-2xl w-full" src="imagess/Article (2).png" alt="">
+                        <p class="absolute top-24 left-4 bg-white px-4 py-2 rounded text-sm font-semibold">$2,850</p>
+                        <div class="space-y-3 p-4 bg-white shadow-2xl ">
+                            <h2 class="text-sm font-bold">Skyper Pool Apartment</h2>
+                            <p class="text-[#717171]">151 Tompkins Ave</p>
+                            <div class="flex gap-5">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>4 Beds</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>1 Baths</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center border-b">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1495)">
+                                        <path
+                                            d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1495">
+                                            <rect width="22.6274" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.75)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>200 sqft</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p>For Sale</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1509)">
+                                        <path
+                                            d="M17.607 0.926634C17.607 0.966634 17.3005 1.00108 16.6877 1.02997C16.0749 1.05886 15.3206 1.0733 14.425 1.0733H4.38406C3.53553 1.0733 2.80486 1.05886 2.19203 1.02997C1.57921 1.00108 1.27279 0.966634 1.27279 0.926634V0.453301C1.22565 0.411079 1.50849 0.375523 2.12132 0.346634C2.73415 0.317745 3.48839 0.303301 4.38406 0.303301H10.0409V0.246634H4.38406C3.81838 0.246634 3.26448 0.251634 2.72236 0.261634C2.18025 0.271634 1.69706 0.286634 1.27279 0.306634C0.848528 0.326634 0.53033 0.349412 0.318198 0.374967C0.106066 0.400523 0 0.426634 0 0.453301V0.926634C0 0.953301 0.106066 0.979412 0.318198 1.00497C0.53033 1.03052 0.848528 1.0533 1.27279 1.0733C1.69706 1.0933 2.18025 1.1083 2.72236 1.1183C3.26448 1.1283 3.81838 1.1333 4.38406 1.1333H14.425C14.9907 1.1333 15.5446 1.1283 16.0867 1.1183C16.6288 1.1083 17.112 1.0933 17.5362 1.0733C17.9605 1.0533 18.2787 1.03052 18.4908 1.00497C18.703 0.979412 18.809 0.953301 18.809 0.926634V0.659967H17.607V0.926634ZM18.1726 0.246634H12.5158V0.303301H16.6877L8.98026 0.669967L9.82878 0.709967L17.607 0.346634V0.539967H18.809V0.276634C18.809 0.267745 18.7501 0.260523 18.6323 0.254968C18.5144 0.249412 18.3612 0.246634 18.1726 0.246634Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1509">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1512)">
+                                        <path
+                                            d="M10.4652 1.14014C9.99384 1.14014 9.55779 1.13569 9.1571 1.1268C8.7564 1.11791 8.41463 1.10458 8.13179 1.0868L1.5557 0.706803C0.754311 0.669026 0.235766 0.625137 6.3926e-05 0.575137C-0.235638 0.525137 -0.176713 0.475692 0.176841 0.426803C0.530394 0.377915 1.13143 0.336803 1.97996 0.30347C2.82849 0.270137 3.79487 0.250137 4.8791 0.24347C5.96333 0.236803 7.01221 0.244026 8.02573 0.265137C9.03924 0.286248 9.85242 0.317915 10.4652 0.360137C10.6538 0.346803 10.8895 0.33347 11.1723 0.320137C11.9266 0.284581 12.7987 0.260692 13.7886 0.24847C14.7786 0.236248 15.7685 0.236248 16.7585 0.24847C17.7484 0.260692 18.6205 0.284026 19.3748 0.31847C20.129 0.352915 20.6358 0.394026 20.8951 0.441803C21.1543 0.489581 21.1543 0.536803 20.8951 0.58347C20.6358 0.630137 20.129 0.671248 19.3748 0.706803L12.7987 1.0868C12.5159 1.10458 12.1741 1.11791 11.7734 1.1268C11.3727 1.13569 10.9366 1.14014 10.4652 1.14014ZM5.65692 0.306803C4.76125 0.306803 3.94808 0.31847 3.2174 0.341803C2.48672 0.365137 1.95639 0.396248 1.62641 0.435137C1.29643 0.474026 1.21393 0.51347 1.37892 0.55347C1.54391 0.59347 1.93282 0.629026 2.54565 0.660137L9.26316 1.04347C9.54601 1.06125 9.93491 1.07014 10.4299 1.07014C10.9249 1.07014 11.3373 1.06125 11.6673 1.04347L18.3848 0.660137C18.9977 0.629026 19.3984 0.592359 19.5869 0.550137C19.7755 0.507915 19.6812 0.467359 19.3041 0.42847C18.927 0.389581 18.3613 0.359026 17.607 0.336803C16.8528 0.314581 16.016 0.304026 15.0968 0.305137C14.1776 0.306248 13.3644 0.319581 12.6573 0.345137C11.9502 0.370692 11.4316 0.40347 11.1016 0.44347C11.0545 0.450137 10.972 0.455692 10.8542 0.460137C10.7363 0.464581 10.6067 0.466803 10.4652 0.466803C10.3238 0.466803 10.1942 0.464581 10.0763 0.460137C9.95848 0.455692 9.87599 0.450137 9.82885 0.44347C9.49886 0.40347 8.95675 0.370692 8.2025 0.345137C7.44826 0.319581 6.59973 0.306803 5.65692 0.306803Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1512">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1515)">
+                                        <path
+                                            d="M18.3141 0.509968C17.9369 0.49219 17.4891 0.483301 16.9706 0.483301H13.7886V0.333301C13.7886 0.308856 13.6118 0.288301 13.2583 0.271634C12.9047 0.254968 12.4686 0.246634 11.9501 0.246634H1.83848C1.31993 0.246634 0.883883 0.254968 0.53033 0.271634C0.176777 0.288301 0 0.308856 0 0.333301V0.809967C0 0.834412 0.176777 0.854967 0.53033 0.871634C0.883883 0.888301 1.31993 0.896634 1.83848 0.896634H5.02046V1.04663C5.02046 1.07108 5.19723 1.09163 5.55079 1.1083C5.90434 1.12497 6.34039 1.1333 6.85894 1.1333H16.9706C17.4891 1.1333 17.9252 1.12497 18.2787 1.1083C18.6323 1.09163 18.809 1.07108 18.809 1.04663V0.569967C18.809 0.545523 18.644 0.525523 18.3141 0.509968ZM1.83848 0.836634C1.69706 0.836634 1.56742 0.833856 1.44957 0.828301C1.33172 0.822745 1.27279 0.815523 1.27279 0.806634V0.333301C1.27279 0.326634 1.33172 0.319968 1.44957 0.313301C1.56742 0.306634 1.69706 0.303301 1.83848 0.303301H11.9501C12.0915 0.303301 12.2212 0.306634 12.339 0.313301C12.4569 0.319968 12.5158 0.326634 12.5158 0.333301V0.483301H6.92965C6.36396 0.483301 5.90434 0.491634 5.55079 0.508301C5.19723 0.524967 5.02046 0.545523 5.02046 0.569967V0.836634H1.83848ZM17.607 1.04663C17.607 1.0533 17.5362 1.05941 17.3948 1.06497C17.2534 1.07052 17.112 1.07441 16.9706 1.07663H6.92965C6.74108 1.07441 6.58788 1.07052 6.47003 1.06497C6.35218 1.05941 6.29325 1.0533 6.29325 1.04663V0.569967C6.29325 0.563301 6.35218 0.55719 6.47003 0.551634C6.58788 0.546079 6.74108 0.543301 6.92965 0.543301H16.9706C17.112 0.543301 17.2534 0.546079 17.3948 0.551634C17.5362 0.55719 17.607 0.564412 17.607 0.573301V1.04663ZM12.5158 0.689967H11.3137V0.779967H9.40452V0.836634H11.3137V0.926634H12.5158V0.836634H14.425V0.779967H12.5158V0.689967Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1515">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CARD 4 -->
+                    <div class="relative">
+                        <img class="rounded-t-2xl w-full" src="imagess/Article (4).png" alt="">
+                        <p class="absolute top-24 left-4 bg-white px-4 py-2 rounded text-sm font-semibold">$2,850</p>
+                        <div class="space-y-3 p-4 bg-white shadow-2xl ">
+                            <h2 class="text-sm font-bold">Diamond Manor Apartment</h2>
+                            <p class="text-[#717171]">343 Franklin Ave</p>
+                            <div class="flex gap-5">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>4 Beds</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_6108_1495)">
+                                            <path
+                                                d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                                fill="#181A20" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_6108_1495">
+                                                <rect width="22.6274" height="1" fill="white"
+                                                    transform="matrix(1 0 0 -1 0 1.75)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <p>1 Baths</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center border-b">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="2" viewBox="0 0 23 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1495)">
+                                        <path
+                                            d="M19.535 1.30672L19.3842 1.30339V1.01339C19.3842 0.973385 19.0573 0.938385 18.4036 0.908385C17.75 0.878385 16.9706 0.863385 16.0655 0.863385H3.99751C3.09241 0.863385 2.31302 0.878385 1.65934 0.908385C1.00566 0.938385 0.678823 0.973385 0.678823 1.01339V1.30339L0.603398 1.30672C0.201133 1.3245 0 1.34561 0 1.37005V1.60672C0 1.61339 0.0628539 1.62005 0.188562 1.62672C0.31427 1.63339 0.47769 1.63672 0.678823 1.63672H3.99751C4.24893 1.63672 4.42492 1.63227 4.52548 1.62339L5.73228 1.54672H14.4061L15.5375 1.62339C15.6381 1.63227 15.8141 1.63672 16.0655 1.63672H19.4596C19.6104 1.63672 19.7487 1.63339 19.8744 1.62672C20.0001 1.62005 20.063 1.61339 20.063 1.60672V1.37005C20.063 1.34561 19.887 1.3245 19.535 1.30672ZM3.99751 0.923385H16.0655C16.6186 0.923385 17.0963 0.932274 17.4985 0.950052C17.9008 0.96783 18.1019 0.988941 18.1019 1.01339V1.19005C17.8002 1.17227 17.4105 1.15783 16.9328 1.14672C16.4552 1.13561 15.9398 1.13116 15.3866 1.13339H4.67633C3.72095 1.13116 2.94156 1.1445 2.33817 1.17339L1.96104 1.19339V1.01339C1.96104 0.988941 2.16218 0.96783 2.56444 0.950052C2.96671 0.932274 3.4444 0.923385 3.99751 0.923385ZM17.4231 1.28005H2.63987C2.63987 1.25561 2.841 1.2345 3.24326 1.21672C3.64553 1.19894 4.12322 1.19005 4.67633 1.19005H15.3866C15.9398 1.19005 16.4174 1.19894 16.8197 1.21672C17.222 1.2345 17.4231 1.25561 17.4231 1.28005ZM18.7808 1.57672H16.4426L15.3112 1.50005C15.1604 1.49116 14.9592 1.48672 14.7078 1.48672H5.35516C5.10374 1.48672 4.90261 1.49116 4.75176 1.50005L3.62039 1.57672H1.28222V1.37005C1.28222 1.36116 1.35765 1.35394 1.50849 1.34839C1.65934 1.34283 1.81019 1.34005 1.96104 1.34005H18.1019C18.2528 1.34005 18.4036 1.34283 18.5545 1.34839C18.7053 1.35394 18.7808 1.36116 18.7808 1.37005V1.57672Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1495">
+                                            <rect width="22.6274" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.75)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <p>200 sqft</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p>For Sale</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1509)">
+                                        <path
+                                            d="M17.607 0.926634C17.607 0.966634 17.3005 1.00108 16.6877 1.02997C16.0749 1.05886 15.3206 1.0733 14.425 1.0733H4.38406C3.53553 1.0733 2.80486 1.05886 2.19203 1.02997C1.57921 1.00108 1.27279 0.966634 1.27279 0.926634V0.453301C1.22565 0.411079 1.50849 0.375523 2.12132 0.346634C2.73415 0.317745 3.48839 0.303301 4.38406 0.303301H10.0409V0.246634H4.38406C3.81838 0.246634 3.26448 0.251634 2.72236 0.261634C2.18025 0.271634 1.69706 0.286634 1.27279 0.306634C0.848528 0.326634 0.53033 0.349412 0.318198 0.374967C0.106066 0.400523 0 0.426634 0 0.453301V0.926634C0 0.953301 0.106066 0.979412 0.318198 1.00497C0.53033 1.03052 0.848528 1.0533 1.27279 1.0733C1.69706 1.0933 2.18025 1.1083 2.72236 1.1183C3.26448 1.1283 3.81838 1.1333 4.38406 1.1333H14.425C14.9907 1.1333 15.5446 1.1283 16.0867 1.1183C16.6288 1.1083 17.112 1.0933 17.5362 1.0733C17.9605 1.0533 18.2787 1.03052 18.4908 1.00497C18.703 0.979412 18.809 0.953301 18.809 0.926634V0.659967H17.607V0.926634ZM18.1726 0.246634H12.5158V0.303301H16.6877L8.98026 0.669967L9.82878 0.709967L17.607 0.346634V0.539967H18.809V0.276634C18.809 0.267745 18.7501 0.260523 18.6323 0.254968C18.5144 0.249412 18.3612 0.246634 18.1726 0.246634Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1509">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1512)">
+                                        <path
+                                            d="M10.4652 1.14014C9.99384 1.14014 9.55779 1.13569 9.1571 1.1268C8.7564 1.11791 8.41463 1.10458 8.13179 1.0868L1.5557 0.706803C0.754311 0.669026 0.235766 0.625137 6.3926e-05 0.575137C-0.235638 0.525137 -0.176713 0.475692 0.176841 0.426803C0.530394 0.377915 1.13143 0.336803 1.97996 0.30347C2.82849 0.270137 3.79487 0.250137 4.8791 0.24347C5.96333 0.236803 7.01221 0.244026 8.02573 0.265137C9.03924 0.286248 9.85242 0.317915 10.4652 0.360137C10.6538 0.346803 10.8895 0.33347 11.1723 0.320137C11.9266 0.284581 12.7987 0.260692 13.7886 0.24847C14.7786 0.236248 15.7685 0.236248 16.7585 0.24847C17.7484 0.260692 18.6205 0.284026 19.3748 0.31847C20.129 0.352915 20.6358 0.394026 20.8951 0.441803C21.1543 0.489581 21.1543 0.536803 20.8951 0.58347C20.6358 0.630137 20.129 0.671248 19.3748 0.706803L12.7987 1.0868C12.5159 1.10458 12.1741 1.11791 11.7734 1.1268C11.3727 1.13569 10.9366 1.14014 10.4652 1.14014ZM5.65692 0.306803C4.76125 0.306803 3.94808 0.31847 3.2174 0.341803C2.48672 0.365137 1.95639 0.396248 1.62641 0.435137C1.29643 0.474026 1.21393 0.51347 1.37892 0.55347C1.54391 0.59347 1.93282 0.629026 2.54565 0.660137L9.26316 1.04347C9.54601 1.06125 9.93491 1.07014 10.4299 1.07014C10.9249 1.07014 11.3373 1.06125 11.6673 1.04347L18.3848 0.660137C18.9977 0.629026 19.3984 0.592359 19.5869 0.550137C19.7755 0.507915 19.6812 0.467359 19.3041 0.42847C18.927 0.389581 18.3613 0.359026 17.607 0.336803C16.8528 0.314581 16.016 0.304026 15.0968 0.305137C14.1776 0.306248 13.3644 0.319581 12.6573 0.345137C11.9502 0.370692 11.4316 0.40347 11.1016 0.44347C11.0545 0.450137 10.972 0.455692 10.8542 0.460137C10.7363 0.464581 10.6067 0.466803 10.4652 0.466803C10.3238 0.466803 10.1942 0.464581 10.0763 0.460137C9.95848 0.455692 9.87599 0.450137 9.82885 0.44347C9.49886 0.40347 8.95675 0.370692 8.2025 0.345137C7.44826 0.319581 6.59973 0.306803 5.65692 0.306803Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1512">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="2" viewBox="0 0 22 2"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_6108_1515)">
+                                        <path
+                                            d="M18.3141 0.509968C17.9369 0.49219 17.4891 0.483301 16.9706 0.483301H13.7886V0.333301C13.7886 0.308856 13.6118 0.288301 13.2583 0.271634C12.9047 0.254968 12.4686 0.246634 11.9501 0.246634H1.83848C1.31993 0.246634 0.883883 0.254968 0.53033 0.271634C0.176777 0.288301 0 0.308856 0 0.333301V0.809967C0 0.834412 0.176777 0.854967 0.53033 0.871634C0.883883 0.888301 1.31993 0.896634 1.83848 0.896634H5.02046V1.04663C5.02046 1.07108 5.19723 1.09163 5.55079 1.1083C5.90434 1.12497 6.34039 1.1333 6.85894 1.1333H16.9706C17.4891 1.1333 17.9252 1.12497 18.2787 1.1083C18.6323 1.09163 18.809 1.07108 18.809 1.04663V0.569967C18.809 0.545523 18.644 0.525523 18.3141 0.509968ZM1.83848 0.836634C1.69706 0.836634 1.56742 0.833856 1.44957 0.828301C1.33172 0.822745 1.27279 0.815523 1.27279 0.806634V0.333301C1.27279 0.326634 1.33172 0.319968 1.44957 0.313301C1.56742 0.306634 1.69706 0.303301 1.83848 0.303301H11.9501C12.0915 0.303301 12.2212 0.306634 12.339 0.313301C12.4569 0.319968 12.5158 0.326634 12.5158 0.333301V0.483301H6.92965C6.36396 0.483301 5.90434 0.491634 5.55079 0.508301C5.19723 0.524967 5.02046 0.545523 5.02046 0.569967V0.836634H1.83848ZM17.607 1.04663C17.607 1.0533 17.5362 1.05941 17.3948 1.06497C17.2534 1.07052 17.112 1.07441 16.9706 1.07663H6.92965C6.74108 1.07441 6.58788 1.07052 6.47003 1.06497C6.35218 1.05941 6.29325 1.0533 6.29325 1.04663V0.569967C6.29325 0.563301 6.35218 0.55719 6.47003 0.551634C6.58788 0.546079 6.74108 0.543301 6.92965 0.543301H16.9706C17.112 0.543301 17.2534 0.546079 17.3948 0.551634C17.5362 0.55719 17.607 0.564412 17.607 0.573301V1.04663ZM12.5158 0.689967H11.3137V0.779967H9.40452V0.836634H11.3137V0.926634H12.5158V0.836634H14.425V0.779967H12.5158V0.689967Z"
+                                            fill="#181A20" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_6108_1515">
+                                            <rect width="21.2132" height="1" fill="white"
+                                                transform="matrix(1 0 0 -1 0 1.18994)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-2 justify-center mt-10">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                    <img src="imagess/Tablist → Tab - 2 of 2.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials From Our Customers -->
+        <section class="max-w-5xl mx-auto mt-10 p-2">
+            <div class="text-center">
+                <h3 class="text-3xl font-semibold">Testimonials From Our Customers</h3>
+                <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-10 mt-10 mx-auto">
+                <div>
+                    <img class="lg:w-[300px]" src="imagess/h71.jpg.png" alt="">
+                </div>
+                <div class="lg:w-[430px]">
+                    <div class="flex justify-between">
+                        <h2>Perfect Quality</h2>
+                        <img src="imagess/SVG (2).png" alt="">
+                    </div>
+                    <p class="text-xl font-semibold">“Amazing design, easy to customize and a
+                        design quality superlative account on its cloud
+                        platform for the optimized performance. And we
+                        didn’t on our original designs.” </p>
+                    <p class="text-xl font-semibold mt-4">Dianne Russell</p>
+                    <p class="text-[#717171] mt-3">Bank of America</p>
+                    <div class="flex gap-4 mt-2">
+                        <div class="bg-teal-600 rounded-full lg:w-[8%] shadow-2xl p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6  text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                            </svg>
+                        </div>
+                        <div class="bg-teal-600 rounded-full lg:w-[8%] shadow-2xl p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- See how Realtor can help -->
+        <section class="py-32 p-4 bg-[#EB67531A]">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center space-y-2">
+                    <h2 class="text-3xl font-semibold">See how Realtor can help</h2>
+                    <p class="text-sm font-normal">Aliquam lacinia diam quis lacus euismod</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-7 lg:grid-cols-3 py-14">
+                    <div class="space-y-5 hover:scale-105 duration-500 bg-white rounded-lg text-center p-4">
+                        <img class="mx-auto" src="imagess/icon1.svg (2).png" alt="">
+                        <h2 class="text-xl font-semibold">Buy a property</h2>
+                        <p>Nullam sollicitudin blandit eros eu pretium.
+                            Nullam maximus ultricies auctor.</p>
+                        <div class="border py-2 mx-auto hover:bg-black hover:text-white px-2 lg:w-[45%] rounded-">
+                            <p class="flex justify-between">Find a home <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor" class="w-5 ml-1 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-5 hover:scale-105 duration-500 bg-white text-center shadow-xl rounded-lg p-4">
+                        <img class="mx-auto" src="imagess/icon2.svg (1).png" alt="">
+                        <h2 class="text-xl font-semibold">Sell a property</h2>
+                        <p>Nullam sollicitudin blandit eros eu pretium.
+                            Nullam maximus ultricies auctor.</p>
+                        <div class="border py-2 mx-auto bg-black text-white px-2 lg:w-[45%]">
+                            <p class="flex justify-between">Place an ad <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24" fill="currentColor" class="w-5 ml-1 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space-y-5 hover:scale-105 duration-500 rounded-lg bg-white text-center p-4">
+                        <img class="mx-auto" src="imagess/icon3.svg (1).png" alt="">
+                        <h2 class="text-xl font-semibold">Rent a property</h2>
+                        <p>Nullam sollicitudin blandit eros eu pretium.
+                            Nullam maximus ultricies auctor.</p>
+                        <div class="border py-2 mx-auto hover:bg-black hover:text-white px-2 lg:w-[45%] rounded-">
+                            <p class="flex justify-between">Find a rental
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="w-5 ml-1 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Real Estate Inquiry Form -->
+        <section class="max-w-6xl mx-auto py-10 mt-10">
+            <div class="p-2">
+                <h2 class="text-3xl font-semibold mb-2">Real Estate Inquiry Form</h2>
+                <p>As the complexity of buildings to increase</p>
+            </div>
+            <div class="flex flex-col p-2 md:flex-row lg:gap-10">
+                <div class="">
+                    <div>
+                        <div class="lg:mt-14 relative">
+                            <h2 class="text-sm font-semibold mb-2">Inquiry Type</h2>
+                            <input type="text" placeholder="—Please choose an option—"
+                                class="lg:px-40 py-2 w-full rounded border" name="" id="">
+                        </div>
+                        <div class="flex flex-col md:flex-row md:gap-4 lg:gap-8 mt-5">
+                            <div class="mt-2">
+                                <h2 class="text-sm font-semibold mb-2">How to address</h2>
+                                <input type="email" placeholder="—Please choose an option"
+                                    class="border px-6 rounded w-full py-2" name="" id="">
+                            </div>
+                            <div class="mt-2">
+                                <h2 class="text-sm font-semibold mb-2">Your Name</h2>
+                                <input type="email" placeholder="Your Name" class="border w-full lg:px-7 rounded py-2"
+                                    name="" id="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mt-5 relative">
+                                <h2 class="text-sm font-semibold mb-2">Email</h2>
+                                <p class="absolute mt-2 ml-2">example@gmail.com</p>
+                                <input type="text" class="lg:px-40 w-full py-2 rounded border" name="" id="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mt-5 relative">
+                                <h2 class="text-sm font-semibold mb-2">Personnel Role</h2>
+                                <p class="absolute mt-2 ml-2">—Please choose an option—</p>
+                                <input type="text" class="lg:px-40 w-full py-2 rounded border" name="" id="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-8 mt-5">
+                            <div class="mt-2">
+                                <h2 class="text-sm font-semibold mb-2">Max Price</h2>
+                                <input type="email" placeholder="$90" class="border w-full px-6 rounded py-2" name=""
+                                    id="">
+                            </div>
+                            <div class="mt-2">
+                                <h2 class="text-sm font-semibold mb-2">Min Size (Sq ft)</h2>
+                                <input type="email" placeholder="200" class="w-full border px-7 rounded py-2" name=""
+                                    id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="lg:h-[500px] md:h-[436px] mt-2 ml-2" src="imagess/h72.jpg.png" alt="">
+                </div>
+            </div>
+        </section>
+        <!-- Become a Real Estate Agent -->
+        <section class="bg-black text-white h-[600px] md:h-[294px]  lg:py-10 mt-10 p-2">
+            <div class="flex flex-col max-w-6xl mx-auto relative lg:gap-14 md:flex-row lg:items-center">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-semibold">Become a Real Estate Agent</h2>
+                    <p>We only work with the best companies around the globe to survey</p>
+                    <div class="flex gap-2 bg-[#FFF]  rounded py-2 text-black md:w-[30%] lg:w-[30%] px-2">
+                        <p class="text-sm font-bold">Register Now</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <img class="absolute lg:w-[300px]  md:h-[284px] lg:right-20 lg:-top-28" src="imagess/h37.png.png"
+                        alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
